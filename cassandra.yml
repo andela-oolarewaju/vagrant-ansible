@@ -1,0 +1,8 @@
+---
+- hosts: ["node1"]
+  user: vagrant
+  become: yes
+  roles:
+    - role: cassandra
+      tags:
+          - cassandra

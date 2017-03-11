@@ -1,0 +1,9 @@
+- name: installing cassandra
+  apt: pkg=cassandra state=installed update-cache=yes
+  register: cassandra
+
+- name: stopping cassandra
+  service: name=cassandra enabled=yes state=stopped
+
+- name: configuring cassandra
+  template: src=roles/cassandra/templates/cassandra.yaml dest=/etc/cassandra/cassandra.yaml

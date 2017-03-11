@@ -1,0 +1,6 @@
+---
+- include: dependencies.yml
+- include: repositories.yml
+- include: java-install.yml
+- include: cassandra-install.yml
+- include: start-cassandra.yml
