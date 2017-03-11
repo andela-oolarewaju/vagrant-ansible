@@ -1,10 +1,8 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-<<<<<<< HEAD
   # Base VM OS configuration.
   config.vm.box = "debian/wheezy64"
   config.vm.synced_folder '.', '/vagrant', disabled: true
@@ -34,23 +32,9 @@ Vagrant.configure("2") do |config|
           ansible.playbook = "cassandra.yml"
           ansible.inventory_path = "envs/cassandra"
           ansible.limit = "all"
-=======
-  N = 1
-  (1..N).each do |machine_id|
-    config.vm.box = "debian/wheezy64"
-    config.vm.define "node#{machine_id}" do |machine|
-      machine.vm.hostname = "node#{machine_id}"
-      machine.vm.network "private_network", ip: "192.168.77.#{10+machine_id}"
-      config.vm.provider "virtualbox" do |vb|
-        vb.customize ["modifyvm", :id, "--memory", "2048"]
-        vb.cpus = 2
-        if machine_id == N
-          machine.vm.provision :ansible do |ansible|
-            ansible.limit = "all"
-            ansible.playbook = "cassandra.yml"
             
           end
->>>>>>> 8950ee256506efb7faeb1cd57f34fb6cc5b65d5e
+
         end
       end
     end
