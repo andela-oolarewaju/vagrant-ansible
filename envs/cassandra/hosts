@@ -1,4 +1,4 @@
 [cassandra]
-node1 ansible_host=192.168.77.14
-node2 ansible_host=192.168.77.15
-node3 ansible_host=192.168.77.16 
+node1 ansible_host=192.168.77.11
+node2 ansible_host=192.168.77.12
+node3 ansible_host=192.168.77.13 
