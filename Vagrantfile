@@ -32,12 +32,10 @@ Vagrant.configure("2") do |config|
           ansible.playbook = "cassandra.yml"
           ansible.inventory_path = "envs/cassandra"
           ansible.limit = "all"
-            
+
           end
 
         end
       end
     end
   end
-
-end
