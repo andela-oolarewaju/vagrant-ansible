@@ -1,5 +1,5 @@
 config:
    cluster_name: 'test'
-   seeds: '192.168.77.11,192.168.77.12,192.168.77.13'
-   listen_address: 192.168.77.13
-   rpc_address: 192.168.77.13
+   seeds: '192.168.77.14,192.168.77.15,192.168.77.16'
+   listen_address: 192.168.77.16
+   rpc_address: 192.168.77.16
