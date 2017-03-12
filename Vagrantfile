@@ -17,7 +17,6 @@ Vagrant.configure("2") do |config|
           machine.vm.provision :ansible do |ansible|
             ansible.limit = "all"
             ansible.playbook = "cassandra.yml"
-            ansible.inventory_path = "envs/cassandra"
           end
         end
       end
